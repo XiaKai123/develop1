@@ -1,0 +1,19 @@
+spring:
+  profiles.active: [db]
+  application.name: develop
+  velocity.checkTemplateLocation: false
+  mvc:
+    view:
+     prefix: '/WEB-INF/jsp/'
+     suffix: .jsp
+  servlet:
+    multipart:
+      max-file-size: 10Mb
+      max-request-size: 10Mb
+server:
+  port: 8082
+  servlet:
+    context-path: /develop
+  tomcat:
+        uri-encoding: UTF-8
+logging.level.root: debug

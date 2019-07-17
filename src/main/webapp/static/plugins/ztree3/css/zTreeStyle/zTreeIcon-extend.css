@@ -1,0 +1,59 @@
+/**
+ * @描述：zTree图标拓展
+ * @作者：彭辉
+ * @时间：2019/4/18 11:36
+ */
+/* 根节点图标 */
+.ztree li span.button.icon_root_ico_open{background:url(./img/house.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_root_ico_close{background:url(./img/house.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_root_ico_docu{background:url(./img/house.png) no-repeat scroll 0 0px transparent;}
+
+/* 机构图标 */
+.ztree li span.button.icon_org_ico_open{background:url(./img/org.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_org_ico_close{background:url(./img/org.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_org_ico_docu{background:url(./img/org.png) no-repeat scroll 0 0px transparent;}
+
+/* 注销机构图标 */
+.ztree li span.button.icon_org_logout_ico_open{background:url(./img/org_logout.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_org_logout_ico_close{background:url(./img/org_logout.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_org_logout_ico_docu{background:url(./img/org_logout.png) no-repeat scroll 0 0px transparent;}
+
+/* 用户图标 */
+.ztree li span.button.icon_user_ico_open{background:url(./img/user.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_user_ico_close{background:url(./img/user.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_user_ico_docu{background:url(./img/user.png) no-repeat scroll 0 0px transparent;}
+
+/* 目录图标 */
+.ztree li span.button.icon_dir_ico_open{margin-right:2px; background-position:-110px -16px; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon_dir_ico_close{margin-right:2px; background-position:-110px 0; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon_dir_ico_docu{margin-right:2px; background-position:-110px -32px; vertical-align:top; *vertical-align:middle}
+
+/* 数据源图标 */
+.ztree li span.button.icon_datasource_ico_open{background:url(./img/data_source.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_datasource_ico_close{background:url(./img/data_source.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_datasource_ico_docu{background:url(./img/data_source.png) no-repeat scroll 0 0px transparent;}
+
+/* 图层目录图标 */
+.ztree li span.button.icon_layer_dir_ico_open{background:url(./img/layer_dir.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_layer_dir_ico_close{background:url(./img/layer_dir.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_layer_dir_ico_docu{background:url(./img/layer_dir.png) no-repeat scroll 0 0px transparent;}
+
+/* 图层图标 */
+.ztree li span.button.icon_layer_ico_docu{background:url(./img/layer.png) no-repeat scroll 0 0px transparent;}
+
+/* 字典图标 */
+.ztree li span.button.icon_dict_ico_open{background:url(./img/dict_dir.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_dict_ico_close{background:url(./img/dict_dir.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_dict_ico_docu{background:url(./img/dict.png) no-repeat scroll 0 0px transparent;}
+
+/* 控制线目录图标 */
+.ztree li span.button.icon_kzx_dir_ico_open{background:url(./img/dict_dir.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_kzx_dir_ico_close{background:url(./img/dict_dir.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_kzx_dir_ico_docu{background:url(./img/dict_dir.png) no-repeat scroll 0 0px transparent;}
+/* 控制线图标 */
+.ztree li span.button.icon_kzx_ico_docu{background:url(./img/dict.png) no-repeat scroll 0 0px transparent;}
+
+/* 系统图标 */
+.ztree li span.button.icon_system_ico_open{background:url(./img/system.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_system_ico_close{background:url(./img/system.png) no-repeat scroll 0 0px transparent;}
+.ztree li span.button.icon_system_ico_docu{background:url(./img/system.png) no-repeat scroll 0 0px transparent;}

@@ -1,0 +1,137 @@
+body{	
+	font: 14px "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
+	background-color:transparent;
+}
+.panel-group {
+	position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    margin-bottom: 10px;  
+}
+.results-group .panel-heading{
+	width:300px;
+}
+.panel-group .panel-collapse .panel-body {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+    background-color:white;
+}
+.result-nav{
+	width: 100%;
+	height: 29px;
+	padding:2px 6px 0px 10px;
+    border: none;
+    border-bottom: 2px solid #62a8ea;
+}
+.result-title{
+	font-size:14px;
+	color:#333;
+}
+#siteMegaDestination{
+	display:block;
+}
+
+/*图层树列表部分  */
+.search-result{	
+	height: 31px;
+	margin: 6px 6px 6px 6px;
+	padding-top: 5px;
+	padding-right: 10px;
+	color: #444343;
+	font-size:14px;
+	text-align: right;
+	background-color: #dadada;	
+}
+.layerdir_tree_list{
+	margin: 0px 5px;
+    padding-left: 20px;
+	padding-bottom: 10px;
+    border-bottom: 1px solid #93C2FF;
+}
+.layerdir_tree_list li{	
+	margin-top: 8px;
+	font-size: 13px;
+	list-style:none;
+	text-decoration:underline;
+	cursor:pointer;
+}
+.list_result_all{
+	color:#00f;
+}
+.list_result{
+	color:#337ab7;
+}
+.list_result:hover{
+	color:#f00;
+}
+.layerdir_tree_list li span{
+	color:#f00;
+}
+/*属性查询结果部分  */
+.aQueryRes a{
+	font-size:15px;
+	cursor:pointer;
+}
+.showAtt{
+	margin-top:5px;
+}
+.showAtt a{
+	font-size:12px;	
+	cursor:pointer;
+}
+.record a:hover{
+	color:#f00;	
+}
+.showAtt a:hover,.showAtt a:focus{
+	text-decoration:none;
+}
+/*属性查询结果表格 */
+.showTableCls{
+	width:100%;
+	margin-top:5px;
+	font-size:13px;
+	border:1px solid #ccc;
+}
+
+.showTableCls td{
+    padding: 3px;
+    color:#333;  
+    border: 1px solid #C3C3C3;
+}
+.td1{
+	width:40%;
+	background-color: #eee;	
+}
+.td2:hover{
+	background-color: #eee;
+}
+.result-hide{
+	display:none;
+}
+.queryTable{
+	width:100%;
+}
+.record{
+	margin-top:12px;
+}
+.paginationCss{
+	background-color:#fff;
+}
+.result-content{
+	display:none;
+}
+#queryTable tr:nth-child(1) .result-content{
+	display:block;
+}
+/*分页  */
+.paginationCss{
+	display:none;
+}
+#panel-body{
+	padding:0px;
+	margin: 0px;
+}
+
+

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@192.168.5.222">
+  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.9">
+    <root id="1">
+      <ServerVersion>11.2.0.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="DEVELOP">
+      <ObjectId>105</ObjectId>
+      <IntrospectionTimestamp>2019-06-18.18:32:29</IntrospectionTimestamp>
+      <CreatedTimestamp>2019-05-08.00:09:56</CreatedTimestamp>
+      <ModifiedTimestamp>2019-05-08.00:28:36</ModifiedTimestamp>
+      <CommentsHash>197610497127579</CommentsHash>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="SYSTEM">
+      <ObjectId>5</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="OUTLN">
+      <ObjectId>9</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="DIP">
+      <ObjectId>14</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="ORACLE_OCM">
+      <ObjectId>21</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="DBSNMP">
+      <ObjectId>30</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="APPQOSSYS">
+      <ObjectId>31</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="WMSYS">
+      <ObjectId>32</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="EXFSYS">
+      <ObjectId>42</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="CTXSYS">
+      <ObjectId>43</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="XDB">
+      <ObjectId>45</ObjectId>
+    </schema>
+    <schema id="15" parent="1" name="ANONYMOUS">
+      <ObjectId>46</ObjectId>
+    </schema>
+    <schema id="16" parent="1" name="ORDSYS">
+      <ObjectId>53</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="ORDDATA">
+      <ObjectId>54</ObjectId>
+    </schema>
+    <schema id="18" parent="1" name="ORDPLUGINS">
+      <ObjectId>55</ObjectId>
+    </schema>
+    <schema id="19" parent="1" name="SI_INFORMTN_SCHEMA">
+      <ObjectId>56</ObjectId>
+    </schema>
+    <schema id="20" parent="1" name="MDSYS">
+      <ObjectId>57</ObjectId>
+    </schema>
+    <schema id="21" parent="1" name="OLAPSYS">
+      <ObjectId>61</ObjectId>
+    </schema>
+    <schema id="22" parent="1" name="MDDATA">
+      <ObjectId>65</ObjectId>
+    </schema>
+    <schema id="23" parent="1" name="SPATIAL_WFS_ADMIN_USR">
+      <ObjectId>67</ObjectId>
+    </schema>
+    <schema id="24" parent="1" name="SPATIAL_CSW_ADMIN_USR">
+      <ObjectId>70</ObjectId>
+    </schema>
+    <schema id="25" parent="1" name="SYSMAN">
+      <ObjectId>72</ObjectId>
+    </schema>
+    <schema id="26" parent="1" name="MGMT_VIEW">
+      <ObjectId>74</ObjectId>
+    </schema>
+    <schema id="27" parent="1" name="FLOWS_FILES">
+      <ObjectId>75</ObjectId>
+    </schema>
+    <schema id="28" parent="1" name="APEX_PUBLIC_USER">
+      <ObjectId>76</ObjectId>
+    </schema>
+    <schema id="29" parent="1" name="APEX_030200">
+      <ObjectId>78</ObjectId>
+    </schema>
+    <schema id="30" parent="1" name="OWBSYS">
+      <ObjectId>79</ObjectId>
+    </schema>
+    <schema id="31" parent="1" name="OWBSYS_AUDIT">
+      <ObjectId>83</ObjectId>
+    </schema>
+    <schema id="32" parent="1" name="SCOTT">
+      <ObjectId>84</ObjectId>
+    </schema>
+    <schema id="33" parent="1" name="HR">
+      <ObjectId>85</ObjectId>
+    </schema>
+    <schema id="34" parent="1" name="OE">
+      <ObjectId>86</ObjectId>
+    </schema>
+    <schema id="35" parent="1" name="IX">
+      <ObjectId>87</ObjectId>
+    </schema>
+    <schema id="36" parent="1" name="SH">
+      <ObjectId>88</ObjectId>
+    </schema>
+    <schema id="37" parent="1" name="PM">
+      <ObjectId>89</ObjectId>
+    </schema>
+    <schema id="38" parent="1" name="BI">
+      <ObjectId>90</ObjectId>
+    </schema>
+    <schema id="39" parent="1" name="SDE">
+      <ObjectId>91</ObjectId>
+    </schema>
+    <schema id="40" parent="1" name="DGWFS">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="41" parent="1" name="ONESTOP">
+      <ObjectId>102</ObjectId>
+    </schema>
+    <schema id="42" parent="1" name="ONESTOPSHOW">
+      <ObjectId>104</ObjectId>
+    </schema>
+    <schema id="43" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+    <table id="44" parent="2" name="SYS_ORG">
+      <ObjectId>89862</ObjectId>
+      <Comment>组织表</Comment>
+      <CreatedTimestamp>2019-05-08.00:26:00</CreatedTimestamp>
+      <ModifiedTimestamp>2019-05-08.00:26:00</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="45" parent="2" name="SYS_USER">
+      <ObjectId>89861</ObjectId>
+      <Comment>用户表</Comment>
+      <CreatedTimestamp>2019-05-08.00:09:56</CreatedTimestamp>
+      <ModifiedTimestamp>2019-05-08.00:14:44</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="46" parent="2" name="SYS_USER2ORG">
+      <ObjectId>89863</ObjectId>
+      <Comment>用户组织关联表</Comment>
+      <CreatedTimestamp>2019-05-08.00:28:36</CreatedTimestamp>
+      <ModifiedTimestamp>2019-05-08.00:28:36</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <column id="47" parent="44" name="ID">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="44" name="NAME">
+      <Position>2</Position>
+      <Comment>机构名称</Comment>
+      <DataType>VARCHAR2(200 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="44" name="CODE">
+      <Position>3</Position>
+      <Comment>机构编码</Comment>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="50" parent="44" name="PARENT_ID">
+      <Position>4</Position>
+      <Comment>父节点ID</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+    </column>
+    <column id="51" parent="44" name="MANAGER">
+      <Position>5</Position>
+      <Comment>负责人</Comment>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="52" parent="44" name="PHONE">
+      <Position>6</Position>
+      <Comment>电话</Comment>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="53" parent="44" name="ADDRESS">
+      <Position>7</Position>
+      <Comment>地址</Comment>
+      <DataType>VARCHAR2(255 byte)|0s</DataType>
+    </column>
+    <column id="54" parent="44" name="SORT">
+      <Position>8</Position>
+      <Comment>排序</Comment>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="55" parent="44" name="SEQUENCE">
+      <Position>9</Position>
+      <Comment>序列号</Comment>
+      <DataType>VARCHAR2(255 byte)|0s</DataType>
+    </column>
+    <column id="56" parent="44" name="REMARK">
+      <Position>10</Position>
+      <Comment>备注</Comment>
+      <DataType>VARCHAR2(400 byte)|0s</DataType>
+    </column>
+    <column id="57" parent="44" name="STATUS">
+      <Position>11</Position>
+      <Comment>状态(0：注销，1：正常)</Comment>
+      <DataType>VARCHAR2(2 byte)|0s</DataType>
+    </column>
+    <column id="58" parent="44" name="MEMO1">
+      <Position>12</Position>
+      <Comment>备用1</Comment>
+      <DataType>CHAR(1 byte)|0s</DataType>
+    </column>
+    <column id="59" parent="44" name="MEMO2">
+      <Position>13</Position>
+      <Comment>备用2</Comment>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="60" parent="44" name="MEMO3">
+      <Position>14</Position>
+      <Comment>备用3</Comment>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="61" parent="44" name="MEMO4">
+      <Position>15</Position>
+      <Comment>备用4</Comment>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="62" parent="44" name="MEMO5">
+      <Position>16</Position>
+      <Comment>备用5</Comment>
+      <DataType>CHAR(1 byte)|0s</DataType>
+    </column>
+    <column id="63" parent="44" name="MEMO6">
+      <Position>17</Position>
+      <Comment>备用6</Comment>
+      <DataType>CHAR(1 byte)|0s</DataType>
+    </column>
+    <column id="64" parent="44" name="APP_CODE">
+      <Position>18</Position>
+      <Comment>应用ID</Comment>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+    </column>
+    <column id="65" parent="44" name="CREATOR">
+      <Position>19</Position>
+      <Comment>创建人</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+    </column>
+    <column id="66" parent="44" name="CREATE_TIME">
+      <Position>20</Position>
+      <Comment>创建时间</Comment>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="67" parent="44" name="MODIFIER">
+      <Position>21</Position>
+      <Comment>修改人</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+    </column>
+    <column id="68" parent="44" name="MODIFY_TIME">
+      <Position>22</Position>
+      <Comment>修改时间</Comment>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="69" parent="45" name="ID">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="45" name="LOGIN_NAME">
+      <Position>2</Position>
+      <Comment>登录名</Comment>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+    </column>
+    <column id="71" parent="45" name="PASSWORD">
+      <Position>3</Position>
+      <Comment>密码</Comment>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+    </column>
+    <column id="72" parent="45" name="NAME">
+      <Position>4</Position>
+      <Comment>姓名</Comment>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+    </column>
+    <column id="73" parent="45" name="SEX">
+      <Position>5</Position>
+      <Comment>性别</Comment>
+      <DataType>CHAR(1 byte)|0s</DataType>
+    </column>
+    <column id="74" parent="45" name="TEL">
+      <Position>6</Position>
+      <Comment>电话</Comment>
+      <DataType>VARCHAR2(40 byte)|0s</DataType>
+    </column>
+    <column id="75" parent="45" name="ADDRESS">
+      <Position>7</Position>
+      <Comment>地址</Comment>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="76" parent="45" name="EMAIL">
+      <Position>8</Position>
+      <Comment>邮箱</Comment>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+    </column>
+    <column id="77" parent="45" name="NATION">
+      <Position>9</Position>
+      <Comment>民族</Comment>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+    </column>
+    <column id="78" parent="45" name="CARD_TYPE">
+      <Position>10</Position>
+      <Comment>证件类型</Comment>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+    </column>
+    <column id="79" parent="45" name="IDCARD">
+      <Position>11</Position>
+      <Comment>身份证号</Comment>
+      <DataType>VARCHAR2(18 byte)|0s</DataType>
+    </column>
+    <column id="80" parent="45" name="POLITIC">
+      <Position>12</Position>
+      <Comment>政治面貌</Comment>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+    </column>
+    <column id="81" parent="45" name="BORN_TIME">
+      <Position>13</Position>
+      <Comment>出生日期</Comment>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="82" parent="45" name="EDUCATION">
+      <Position>14</Position>
+      <Comment>教育程度</Comment>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+    </column>
+    <column id="83" parent="45" name="REMARK">
+      <Position>15</Position>
+      <Comment>备注</Comment>
+      <DataType>VARCHAR2(255 byte)|0s</DataType>
+    </column>
+    <column id="84" parent="45" name="ERROR_COUNT">
+      <Position>16</Position>
+      <Comment>登录错误次数</Comment>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="85" parent="45" name="STATUS">
+      <Position>17</Position>
+      <Comment>状态（0：注销，1：正常）</Comment>
+      <DataType>VARCHAR2(2 byte)|0s</DataType>
+    </column>
+    <column id="86" parent="45" name="CANCELED_REASON">
+      <Position>18</Position>
+      <Comment>注销原因</Comment>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+    </column>
+    <column id="87" parent="45" name="LOCK_TIME">
+      <Position>19</Position>
+      <Comment>锁定时间</Comment>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="88" parent="45" name="MEMO1">
+      <Position>20</Position>
+      <Comment>电子签名</Comment>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+    </column>
+    <column id="89" parent="45" name="MEMO2">
+      <Position>21</Position>
+      <Comment>签字密码</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+    </column>
+    <column id="90" parent="45" name="MEMO3">
+      <Position>22</Position>
+      <Comment>是否代理</Comment>
+      <DataType>VARCHAR2(1 byte)|0s</DataType>
+    </column>
+    <column id="91" parent="45" name="APP_CODE">
+      <Position>23</Position>
+      <Comment>应用ID</Comment>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+    </column>
+    <column id="92" parent="45" name="CREATOR">
+      <Position>24</Position>
+      <Comment>创建人</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+    </column>
+    <column id="93" parent="45" name="CREATE_TIME">
+      <Position>25</Position>
+      <Comment>创建时间</Comment>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="94" parent="45" name="MODIFIER">
+      <Position>26</Position>
+      <Comment>修改人</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+    </column>
+    <column id="95" parent="45" name="MODIFY_TIME">
+      <Position>27</Position>
+      <Comment>修改时间</Comment>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="96" parent="45" name="POSITION">
+      <Position>28</Position>
+      <Comment>职务</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+    </column>
+    <column id="97" parent="46" name="ID">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="98" parent="46" name="ORG_ID">
+      <Position>2</Position>
+      <Comment>菜单ID</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="99" parent="46" name="USER_ID">
+      <Position>3</Position>
+      <Comment>角色ID</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="100" parent="46" name="CREATOR">
+      <Position>4</Position>
+      <Comment>创建人</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+    </column>
+    <column id="101" parent="46" name="CREATE_TIME">
+      <Position>5</Position>
+      <Comment>创建时间</Comment>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="102" parent="46" name="MODIFIER">
+      <Position>6</Position>
+      <Comment>修改人</Comment>
+      <DataType>VARCHAR2(32 byte)|0s</DataType>
+    </column>
+    <column id="103" parent="46" name="MODIFY_TIME">
+      <Position>7</Position>
+      <Comment>修改时间</Comment>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+  </database-model>
+</dataSource>

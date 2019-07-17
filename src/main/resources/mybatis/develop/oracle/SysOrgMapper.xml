@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guodi.buss.persistence.mapper.SysOrgMapper">
+
+    <resultMap type="com.guodi.buss.persistence.entity.SysOrg" id="sysOrgResultMap">
+        <result property="id" column="ID" jdbcType="VARCHAR"/>
+        <result property="name" column="NAME" jdbcType="VARCHAR"/>
+        <result property="code" column="CODE" jdbcType="VARCHAR"/>
+        <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+        <result property="modifier" column="MODIFIER" jdbcType="VARCHAR"/>
+        <result property="modifyTime" column="MODIFY_TIME" jdbcType="TIMESTAMP"/>
+        <!-- 配置映射的用户信息 -->
+        <collection  property="sysUserList" ofType="com.guodi.buss.persistence.entity.SysUser">
+            <id column="id" property="id"/>
+            <result  property="loginName" column="LOGIN_NAME"/>
+        </collection>
+    </resultMap>
+
+    <sql id="tableName">
+        sys_org
+    </sql>
+
+    <select id="listOrgUser" resultMap="sysOrgResultMap" >
+        select o.*, u.* from sys_org o, sys_user u where o.id = u.id
+    </select>
+
+
+    <select id="listByEntity" resultMap="sysOrgResultMap">
+     select
+     distinct o.*
+     from
+       <include refid="tableName"></include> o where 1 = 1
+    <if test="name != null and name != ''">
+        and o.name like concat('%', concat(#{name}, '%'))
+    </if>
+        order by o.create_time desc
+    </select>
+
+    <!-- 修改 -->
+    <update id="update">
+        update
+        <include refid="tableName"></include>
+        set
+        name = #{name},
+        code = #{code}
+        where
+        id = #{id}
+    </update>
+
+    <!-- 根据id查询 -->
+    <select id="findById" parameterType="java.lang.String" resultMap="sysOrgResultMap">
+        select
+        *
+        from
+        <include refid="tableName"></include>
+        where
+        id = #{id}
+    </select>
+
+    <!-- 新增 -->
+    <insert id="save" >
+        insert into <include refid="tableName"></include>(id, name, code, create_time)
+        values (#{id}, #{name}, #{code},sysdate)
+    </insert>
+
+    <!-- 新增 -->
+    <delete id="delete">
+        delete from <include refid="tableName"></include>
+        where
+        id = #{id}
+    </delete>
+</mapper>

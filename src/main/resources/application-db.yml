@@ -1,0 +1,12 @@
+spring.datasource-primary:
+    url: jdbc:oracle:thin:@192.168.5.222:1521:orcl
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    username: DEVELOP
+    password: develop
+    min_idle: 200
+    max_idle: 5000
+    max_active: 2000
+    initial_size: 1
+    dialect: oracle
+    validation_query: SELECT 1 from DUAL
+

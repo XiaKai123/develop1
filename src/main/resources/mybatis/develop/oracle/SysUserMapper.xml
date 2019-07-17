@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guodi.buss.persistence.mapper.SysUserMapper">
+
+    <resultMap type="com.guodi.buss.persistence.entity.SysUser" id="sysUserResultMap">
+        <result property="id" column="ID" jdbcType="VARCHAR"/>
+        <result property="loginName" column="LOGIN_NAME" jdbcType="VARCHAR"/>
+        <result property="name" column="NAME" jdbcType="VARCHAR"/>
+        <result property="password" column="PASSWORD" jdbcType="VARCHAR"/>
+        <result property="position" column="POSITION" jdbcType="VARCHAR"/>
+        <result property="sex" column="SEX" jdbcType="VARCHAR"/>
+        <result property="tel" column="TEL" jdbcType="VARCHAR"/>
+        <result property="address" column="ADDRESS" jdbcType="VARCHAR"/>
+        <result property="email" column="EMAIL" jdbcType="VARCHAR"/>
+        <result property="cardType" column="CARD_TYPE" jdbcType="VARCHAR"/>
+        <result property="idcard" column="IDCARD" jdbcType="VARCHAR"/>
+        <result property="nation" column="NATION" jdbcType="VARCHAR"/>
+        <result property="politic" column="POLITIC" jdbcType="VARCHAR"/>
+        <result property="bornTime" column="BORN_TIME" jdbcType="TIMESTAMP"/>
+        <result property="education" column="EDUCATION" jdbcType="VARCHAR"/>
+        <result property="remark" column="REMARK" jdbcType="VARCHAR"/>
+        <result property="errorCount" column="ERROR_COUNT" jdbcType="INTEGER"/>
+        <result property="status" column="STATUS" jdbcType="VARCHAR"/>
+        <result property="canceledReason" column="CANCELED_REASON" jdbcType="VARCHAR"/>
+        <result property="lockTime" column="LOCK_TIME" jdbcType="TIMESTAMP"/>
+        <result property="memo1" column="MEMO1" jdbcType="VARCHAR"/>
+        <result property="memo2" column="MEMO2" jdbcType="VARCHAR"/>
+        <result property="memo3" column="MEMO3" jdbcType="OTHER"/>
+        <result property="appCode" column="APP_CODE" jdbcType="VARCHAR"/>
+        <result property="creator" column="CREATOR" jdbcType="VARCHAR"/>
+        <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+        <result property="modifier" column="MODIFIER" jdbcType="VARCHAR"/>
+        <result property="modifyTime" column="MODIFY_TIME" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="tableName">
+        sys_user
+    </sql>
+
+    <!-- 新增 -->
+    <insert id="save" >
+        insert into <include refid="tableName"></include>(id, login_name, password, name, position, sex, tel, address, email, card_type, idcard, nation, politic, born_time, education, remark, error_count, status, canceled_reason, lock_time, memo1, memo2, memo3, app_code, creator, create_time, modifier, modify_time)
+        values (#{id}, #{loginName}, #{password}, #{name}, #{position}, #{sex}, #{tel}, #{address}, #{email}, #{cardType}, #{idcard}, #{nation}, #{politic}, #{bornTime}, #{education}, #{remark}, #{errorCount}, #{status}, #{canceledReason}, #{lockTime}, #{memo1}, #{memo2}, #{memo3}, #{appCode}, #{creator}, sysdate, #{modifier}, sysdate)
+    </insert>
+
+    <!-- 修改 -->
+    <update id="update">
+        update
+        <include refid="tableName"></include>
+        set
+        name = #{name},
+        position = #{position},
+        sex = #{sex},
+        tel = #{tel},
+        address = #{address},
+        email = #{email},
+        card_type = #{cardType},
+        idcard = #{idcard},
+        nation = #{nation},
+        politic = #{politic},
+        born_time = #{bornTime},
+        education = #{education},
+        remark = #{remark}
+        <!--注释愿意：防止莫名其妙注销或赋值为空2019/04/23 郝明才,status = #{status}-->
+        where
+        id = #{id}
+    </update>
+
+    <!-- 根据id修改密码 -->
+    <update id="updatePwdById">
+        update
+        <include refid="tableName"></include>
+        set
+        password = #{password}
+        where
+        id = #{id}
+    </update>
+
+    <!-- 根据id修改状态 -->
+    <update id="updateStatusById">
+        update
+        <include refid="tableName"></include>
+        set
+        status = #{status}
+        where
+        id = #{id}
+    </update>
+
+    <!-- 根据id修改所属应用 -->
+    <update id="updateAppCodeById">
+        update
+        <include refid="tableName"></include>
+        set
+        app_code = #{appCode},
+        modifier = #{modifier},
+        modify_time = sysdate
+        where
+        id in
+        <foreach collection="ids" index="index" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+
+    <!-- 根据id查询 -->
+    <select id="findById" parameterType="java.lang.String" resultMap="sysUserResultMap">
+        select
+        *
+        from
+        <include refid="tableName"></include>
+        where
+        id = #{id}
+    </select>
+
+    <!-- 根据登陆名查询 -->
+    <select id="findByLoginName" parameterType="java.lang.String" resultMap="sysUserResultMap">
+        select
+        *
+        from
+        <include refid="tableName"></include>
+        where
+        login_name = #{loginName}
+    </select>
+
+    <!-- 通过实体作为筛选条件查询 -->
+    <select id="listByEntity" resultMap="sysUserResultMap">
+        select
+        distinct u.*
+        from
+        <include refid="tableName"></include> u, sys_user2org uo
+        where
+        u.id = uo.user_id and u.id != '1'
+        <if test="id != null and id != ''">
+            and u.id = #{id}
+        </if>
+        <if test="status != null and status != ''">
+            and u.status = #{status}
+        </if>
+        <if test="name != null and name != ''">
+            and (
+            u.login_name like concat('%', concat(#{name},'%'))
+            or
+            u.name like concat('%', concat(#{name}, '%'))
+            )
+        </if>
+        <if test="orgIds != null and orgIds!=''">
+            and u.id in (
+            select user_id from sys_user2org where org_id in
+            <foreach collection="orgIds.split(',')" item="orgId" index="index" open="(" close=")" separator=",">
+                #{orgId}
+            </foreach>
+            )
+        </if>
+        <if test="groupIds != null and groupIds!=''">
+            and u.id in (
+            select user_id from sys_user2group where group_id = #{groupIds}
+            )
+        </if>
+        <if test="appCode != null and appCode != ''">
+            and uo.org_id in (select id from sys_org where ','||app_code||',' like concat(concat('%,',#{appCode}),',%'))
+        </if>
+        order by u.status desc, u.modify_time desc
+    </select>
+
+    <!-- 根据机构id查询用户 -->
+    <select id="listByOrgId" resultMap="sysUserResultMap">
+        select
+        *
+        from
+        <include refid="tableName"></include>
+        where
+        id in (
+        select user_id from sys_user2org where org_id = #{orgId}
+        )
+    </select>
+
+    <!-- 根据用户id数组查询 -->
+    <select id="listByUserIds" resultMap="sysUserResultMap">
+        select
+        *
+        from
+        <include refid="tableName"></include>
+        where
+        id in
+        <foreach collection="array" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+</mapper>

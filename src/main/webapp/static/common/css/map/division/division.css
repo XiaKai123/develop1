@@ -1,0 +1,194 @@
+/*样式初始化*/
+body{ 
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
+	overflow: hidden;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	-webkit-text-size-adjust: none;	
+}
+*{
+	text-decoration: none;
+	list-style: none;
+}
+img{
+	border: 0px;
+}
+ul,li,dl,dd,dt,p,ol,h1,h2,h3,h4,h5{
+	padding: 0;
+	margin: 0;
+	font-weight: 100;	
+}
+.wrap{
+	margin: 0 auto;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.index{
+	overflow: hidden;
+}
+.clr{
+	clear:both;
+	width:100%; 
+	height:0px; 
+	line-height:0px;	
+	font-size:1px; 	 
+	visibility:hidden; 
+	overflow:hidden;
+}
+.pointer{
+	cursor:pointer;
+}
+a,input,button{ 
+	outline:none; 
+}
+::-moz-focus-inner{
+	border:0px;
+}
+
+
+.wrapper{
+	clear: both;
+	width: 100%;
+}
+/* 地区选择下拉框样式 */
+body{
+	background-color:transparent;
+}
+.panel-group {
+    margin-bottom: 10px;
+}
+.results-group .panel-heading{
+	width:350px;
+}
+.panel-group .panel-collapse .panel-body {
+	padding-left: 0;
+	padding-right: 0;
+    padding-bottom:0px;
+    padding-top:2px;
+    margin-top:2px;
+    background-color:white;
+}
+.table-bordered {
+	 border-width:0px;
+}
+.result-nav{
+	width: 100%;
+	height: 29px;
+	padding:2px 6px 0 10px;
+    border: none; 
+    border-bottom: 2px solid #62a8ea;
+}
+.result-title{
+	font-size:14px;
+	color:#333;
+}
+#siteMegaDestination{
+	display:block;
+}
+.sel-city-hotcity {
+    padding: 0 5px 0px 8px;
+}
+.sel-city-hotcity li{
+	display:inline-block;
+	padding: 0px 2px;
+	font-size: 14px;
+    color: #3385ff;
+}
+#divisionDetail {
+	display:none;
+	padding:8px 0 5px 5px;
+    background-color: #fff;   
+   	overflow-y: auto;
+    overflow-x: hidden;
+}
+.selCityPlaceList td, .selCityPlaceList tr {
+    margin: 0;
+    padding: 0;
+}
+.selCityPlaceList td {
+    padding-top: 3px;
+}
+.selCityPlaceList td {
+   vertical-align: top;
+}
+.selCityPlaceList td.sel-city-td-sf {
+	width: 56px;
+    padding-right: 8px;   
+}
+.selCityPlaceList .sel-city-td-sf {
+   font-weight: 700;
+}
+.selCityPlaceList .sel-city-td-sf a{
+   color:#333;
+}
+.selCityPlaceList .sel-city-td-item {
+    padding-top: 3px;
+}
+.selCityPlaceList .sel-city-td-item li{		
+	margin:0px 5px;	
+	font-size:13px;
+	color: #666;
+	list-style:none;
+}
+.selCityPlaceList .sel-city-td-item a{
+	font-size: 13px;
+    color:#333;      
+}
+.selCityPlaceList .sel-city-td-sf a {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+#divisionDetail table .list-of-details{
+	margin:0px 5px;
+}
+.list-of-details>td{
+	padding:5px;
+	color: #666;
+	border:1px solid #ccc;	
+}
+.list-of-details .td-title{	
+	width:40%;
+	font-size:13px;
+	background-color:rgba(239, 239, 239, 0.3);
+}
+.list-of-details .td-content{
+	font-size:13px;
+}
+.street-text {
+	margin:-21px 0px 0px 70px;
+	font-size: 13px;
+    color: #666;
+}
+.street-text li{
+	display: inline-block;
+    padding: 4px 4px;
+	color:#666;	
+}
+.panel-body ul li:hover{
+	cursor:pointer;
+    text-decoration: underline;
+}
+.clear-result{
+	float:right;
+	font-size: 14px;
+	color:#3385ff;
+	cursor:pointer;
+	text-decoration: underline;	
+}
+/*.district-content{
+	padding-top: 10px;
+    margin-bottom: 10px;
+    background-color:#fff;
+}*/
+.content-overflow{
+	overflow: auto;
+}
