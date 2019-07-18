@@ -1,14 +1,20 @@
 package com.guodi.buss.controller;
 
 
+import com.guodi.Application;
 import com.guodi.buss.persistence.entity.SysOrg;
-import com.guodi.buss.persistence.entity.SysUser;
 import com.guodi.buss.service.user.SysOrgService;
 import com.guodi.common.BaseController;
+import com.guodi.common.RedisServer;
+import com.guodi.common.RedisServerImpl;
 import com.guodi.common.entity.AjaxResult;
 import com.guodi.common.pager.Page;
-import com.guodi.common.utils.MD5;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.stereotype.Controller;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -26,11 +32,16 @@ import java.util.UUID;
 
 @Controller
 @RequestMapping("/SysOrg")
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes=Application.class)  //主入口类
 public class SysOrgController extends BaseController {
 
 
     @Resource
     private SysOrgService sysOrgService;
+
+    @Autowired
+    private RedisServer redisServer;
 
      /**
      * @描述: 部门列表查询
@@ -39,11 +50,23 @@ public class SysOrgController extends BaseController {
      **/
     @RequestMapping("/toList")
     public ModelAndView toList(SysOrg sysOrg) {
-        List<SysOrg> list = sysOrgService.listOrgUser();
+        redisServer.put("zjx", "12343244324242342423");
+        System.out.println(redisServer.get("zjx"));
 
+
+        List<SysOrg> list = sysOrgService.listOrgUser();
         ModelAndView mv = new ModelAndView();
         mv.setViewName("develop/org/sysOrgList");
         return mv;
+    }
+
+    @Test
+    public void test(){
+        //redisServer.publish();
+        redisServer.put("sb", "zzzz");
+        redisServer.del("sb");
+        System.out.println(redisServer.get("sb"));
+
     }
 
     /**

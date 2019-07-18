@@ -17,3 +17,17 @@ server:
   tomcat:
         uri-encoding: UTF-8
 logging.level.root: debug
+
+spring.redis:
+    host: 127.0.0.1
+    port: 6379
+    #单机版完
+    password: 123456
+    #最大空连接数
+    maxActive: 10000
+    #最大空闲数
+    maxIdle: 20
+    #最大等待时间
+    maxWaitMillis: -1ms
+    #超时时间
+    timeout: 5000ms
