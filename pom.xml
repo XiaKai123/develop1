@@ -101,7 +101,7 @@
         <docx4j.version>3.3.2</docx4j.version>
         <docx4j-export-fo.version>3.3.1</docx4j-export-fo.version>
         <ezmorph.version>1.0.6</ezmorph.version>
-        <fastjson.version>2.9.7</fastjson.version>
+        <fastjson.version>2.10.0</fastjson.version>
         <alibabafastjson.version>1.2.8</alibabafastjson.version>
         <fop.version>2.1</fop.version>
         <groovy.version>2.3.0</groovy.version>
